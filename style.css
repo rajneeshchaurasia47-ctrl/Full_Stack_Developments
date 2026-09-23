@@ -1,175 +1,105 @@
-<<<<<<< HEAD
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
     margin: 0;
-    padding: 0;
-    background-color: antiquewhite;
-}
-
-p {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-weight: 400;
-    font-style: italic;
-    text-align: justify;
-    text-decoration: underline;
-    text-transform: lowercase;
-    text-shadow: 0px 0px 10px #F05;
-    color: blue;
-    display: inline-block;
-
-}
-
-#para {
-    color: aqua;
-}
-
-img {
-    border: 2px solid #F04;
-    /* border-radius: 50%; */
-    float: right;
-    margin-right: 20px;
-    padding: 3px;
-=======
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.game-container {
-    text-align: center;
-    background: white;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.status-panel {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.player-red {
-    color: #ff4d4d;
-}
-
-.player-green {
-    color: #2ecc71;
-}
-
-/* Board Layout */
-.ludo-board {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
-    background: #34495e;
-    padding: 15px;
-    border-radius: 8px;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.quiz-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.home-zone {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1 {
+    color: #2c3e50;
+    margin: 0;
 }
 
-.red-home {
-    background-color: #ff4d4d;
-}
-
-.green-home {
-    background-color: #2ecc71;
-}
-
-.path-zone {
-    display: flex;
-    gap: 5px;
-}
-
-.cell {
-    width: 45px;
-    height: 45px;
-    background: white;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    position: relative;
-}
-
-/* Tokens with Smooth Transitions */
-.token {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), left 0.4s, top 0.4s;
-}
-
-.red-token {
-    background-color: #c0392b;
-    border: 2px solid white;
-}
-
-.green-token {
-    background-color: #27ae60;
-    border: 2px solid white;
-}
-
-/* Dice Animation Class */
-.dice-rolling {
-    animation: spin 0.5s linear;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-
-    50% {
-        transform: rotate(180deg) scale(1.2);
-    }
-
-    100% {
-        transform: rotate(360deg) scale(1);
-    }
-}
-
-.controls button {
-    padding: 10px 20px;
+#timer {
     font-size: 1rem;
     font-weight: bold;
-    background-color: #3498db;
+    color: #e74c3c;
+    background: #fde8e8;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.options li {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.options li:hover {
+    background: #e2e6ea;
+    border-color: #cbd3da;
+}
+
+.btn {
+    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
     cursor: pointer;
+    width: 100%;
     transition: background 0.2s;
 }
 
-.controls button:hover {
-    background-color: #2980b9;
+.btn:hover {
+    background-color: #0056b3;
 }
 
-#dice-result {
-    font-size: 2rem;
+#result {
+    text-align: center;
+}
+
+#score-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#restart-btn {
     margin-top: 10px;
->>>>>>> 23e5706f14186228095042b6d215b949cc27eda1
+    background-color: #28a745;
+}
+
+#restart-btn:hover {
+    background-color: #218838;
 }

@@ -1,13 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>amazon-clone</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Development Quiz with Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>FSD Quiz</h1>
+            <div id="timer">Time Left: <span id="time">20</span>s</div>
+        </div>
+        
+        <div id="quiz-box">
+            <div id="question-container" class="question">Loading question...</div>
+            <ul id="options-container" class="options"></ul>
+            <button id="next-btn" class="btn" onclick="nextQuestion()">Next Question</button>
+        </div>
+        
+        <div id="result" style="display: none;">
+            <div id="score-text"></div>
+            <button id="restart-btn" class="btn" onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
